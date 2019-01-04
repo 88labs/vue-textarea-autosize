@@ -112,9 +112,7 @@ export default {
      * Auto resize textarea by height
      */
     resize: function () {
-      const important = this.isHeightImportant ? 'important' : ''
-
-      this.$el.style.setProperty('height', 'auto', important)
+      this.$el.style.setProperty('height', 'auto')
 
       let contentHeight = this.$el.scrollHeight + 1
 
@@ -132,7 +130,7 @@ export default {
       }
 
       const heightVal = contentHeight + 'px'
-      this.$el.style.setProperty('height', heightVal, important)
+      this.$el.style.setProperty('height', heightVal)
       return this
     }
   },
